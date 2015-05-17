@@ -3,7 +3,8 @@ const extend = (base, extender) => {
     if (extender.hasOwnProperty(prop)) {
       if (
         typeof base[prop] === 'undefined' ||
-        typeof extender[prop] !== 'object'
+        typeof extender[prop] !== 'object' ||
+        Array.isArray(extender[prop])
       ) {
         base[prop] = extender[prop];
       } else {
