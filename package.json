@@ -4,8 +4,8 @@
   "description": "Webpack config builder boilerplate.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "build:prod": "NODE_ENV=production webpack",
+    "compile": "webpack",
+    "compile:prod": "NODE_ENV=production webpack",
     "dev": "webpack-dev-server --port 3000 --hot --inline --colors",
     "dev:quiet": "webpack-dev-server --port 3000 --hot --inline --colors --no-info --quiet"
   },
