@@ -19,8 +19,8 @@ Runs the production webpack build with the NODE_ENV environment variable set to 
 ### `npm run dev`
 Runs the webpack development server at `http://localhost:3000` (inlined at `http://localhost:3000/webpack-dev-server/`).
 
-### `npm run dev:debug`
-Same as `npm run dev`, but includes verbose debugging information.
+### `npm run dev:quiet`
+Same as `npm run dev`, but hides verbose debugging information.
 
 TODO
 ----
