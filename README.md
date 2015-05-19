@@ -11,20 +11,20 @@ Table of Contents
 
 About
 -----
-This boilerplate comes preconfigured with a development and production configuration, but you can add more more as needed by creating a .js file with the same name as the targeted node environment. These files only need to export their changes against the default configuration (found in `build/webpack/configs/default`), as they will be merged into the default configuration before being exported to Webpack.
+This boilerplate comes preconfigured with a development and production configuration, but you can add more more as needed by creating a `.js` file in `~/build/webpack/configs`. These files only need to export changes against the default configuration as the two will be merged before being exported to Webpack.
 
 How to Use
 ----------
-While the setup allows you to run `webpack` directly from the CLI, it's recommended to use the build scripts provided in `package.json`:
+The default setup will configure itself based on the current `NODE_ENV`, but can be forced with the `--make` argument - e.g., `npm run compile --make test`. Doing this will modify what configuration file is used but _won't_ modify the `NODE_ENV`. This is useful because it allows you to, for example, compile the application to disk in development mode, or run the hot development server with the production configuration.
 
 #### `npm run compile`
-Runs the webpack build with your current node environment; compiles the results to disk.
+Runs the Webpack build with your current node environment; compiles the results to disk.
 
 #### `npm run compile:prod`
-Runs the production webpack build with the NODE_ENV environment variable set to "production". This will by default enable functionality such as minification and dead/unused code removal.
+Runs the production Webpack build with the NODE_ENV environment variable set to "production". This will by default enable functionality such as minification and dead/unused code removal.
 
 #### `npm run dev`
-Runs the webpack development server at `http://localhost:3000` (inlined at `http://localhost:3000/webpack-dev-server/`).
+Runs the Webpack development server at `http://localhost:3000` (inlined at `http://localhost:3000/webpack-dev-server/`).
 
 #### `npm run dev:quiet`
 Same as `npm run dev`, but hides verbose debugging information.
