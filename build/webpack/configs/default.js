@@ -49,7 +49,7 @@ module.exports = exports = {
     loaders : [{
       test : [/\.(js|jsx)?$/],
       include : resolve('app'),
-      loaders : ['babel']
+      loaders : ['babel?optional[]=runtime&stage=0']
     }, {
       test : /\.scss?$/,
       include : resolve('app'),
