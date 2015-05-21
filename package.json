@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "compile": "webpack",
-    "compile:prod": "NODE_ENV=production webpack",
+    "compile:prod": "NODE_ENV=production npm run compile",
     "dev": "webpack-dev-server --port 3000 --hot --inline --colors",
     "dev:quiet": "webpack-dev-server --port 3000 --hot --inline --colors --no-info --quiet",
-    "test": "node ./node_modules/karma/bin/karma start"
+    "test": "node ./node_modules/karma/bin/karma start",
+    "test:prod": "NODE_ENV=production npm run test",
+    "deploy": "npm run test:prod && npm run compile:prod"
   },
   "author": "David Zukowski <david@zuko.me> (http://zuko.me)",
   "license": "MIT",
@@ -24,6 +26,7 @@
     "jshint": "^2.7.0",
     "jshint-loader": "^0.8.3",
     "jshint-loader-stylish": "^1.0.0",
+    "jsxhint-loader": "^0.2.0",
     "karma": "^0.12.32",
     "karma-chai": "^0.1.0",
     "karma-chai-plugins": "^0.5.0",
