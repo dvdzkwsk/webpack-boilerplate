@@ -1,6 +1,8 @@
 Webpack Boilerplate
 ===================
 
+[![Build Status](https://travis-ci.org/davezuko/webpack-boilerplate.svg?branch=master)](https://travis-ci.org/davezuko/webpack-boilerplate/)
+
 Simple boilerplate to get up and running with a [Webpack](http://webpack.github.io/)-based build system; designed to make environment-specific configuration as easy as possible.
 
 Table of Contents
