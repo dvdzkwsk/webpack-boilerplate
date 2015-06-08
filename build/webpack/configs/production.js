@@ -1,8 +1,8 @@
-const config  = require('./default');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+import webpack from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import config from './default';
 
-module.exports = exports = {
+export default {
   plugins : config.plugins.concat([
     new webpack.optimize.UglifyJsPlugin({
       output : {

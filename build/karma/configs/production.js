@@ -1,9 +1,11 @@
-const WEBPACK_CONFIG = require('../../webpack/make')('development');
+import makeWebpackConfig from '../../webpack/make';
+
+const WEBPACK_CONFIG = makeWebpackConfig('development');
 
 export default {
   reporters : ['spec', 'coverage'],
   singleRun : true,
-  coverageReporter: {
+  coverageReporter : {
     type : 'html',
     dir  : 'dist/coverage/'
   },

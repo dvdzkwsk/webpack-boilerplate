@@ -1,11 +1,13 @@
-const path = require('path');
-const WEBPACK_CONFIG = require('../../webpack/make')('development');
-const APP_ENTRY = 'app/spec.js';
+import path from 'path';
+import makeWebpackConfig from '../../webpack/make';
+
+const WEBPACK_CONFIG = makeWebpackConfig('development');
+const TEST_SUITE_ENTRY = 'app/spec.js';
 
 export default {
   files : [
     './node_modules/phantomjs-polyfill/bind-polyfill.js',
-    APP_ENTRY
+    TEST_SUITE_ENTRY
   ],
   frameworks : ['chai', 'mocha'],
   preprocessors: {

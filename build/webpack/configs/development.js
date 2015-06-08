@@ -1,7 +1,7 @@
-const config  = require('./default');
-const webpack = require('webpack');
+import webpack from 'webpack';
+import config from './default';
 
-module.exports = exports = {
+export default {
   devtool : 'eval',
   target  : 'web',
   entry   : {

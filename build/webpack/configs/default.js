@@ -1,6 +1,7 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import webpack from 'webpack';
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+
 const NODE_ENV = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const node_env = NODE_ENV.toLowerCase();
 
@@ -10,7 +11,7 @@ const resolve = function (localPath) {
   return path.resolve(root, localPath);
 };
 
-module.exports = exports = {
+export default {
   entry : {
     app : [
       resolve('app/index')
@@ -38,7 +39,21 @@ module.exports = exports = {
     new webpack.optimize.DedupePlugin()
   ],
   resolve : {
-    extensions : ['', '.js', '.jsx']
+    extensions : ['', '.js', '.jsx'],
+    alias : {
+      actions     : resolve('app/actions'),
+      components  : resolve('app/components'),
+      config      : resolve('app/config'),
+      constants   : resolve('app/constants'),
+      directives  : resolve('app/directives'),
+      dispatchers : resolve('app/dispatchers'),
+      factories   : resolve('app/factories'),
+      filters     : resolve('app/filters'),
+      models      : resolve('app/models'),
+      providers   : resolve('app/providers'),
+      services    : resolve('app/services'),
+      stores      : resolve('app/stores')
+    }
   },
   module : {
     preLoaders: [{

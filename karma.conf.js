@@ -1,4 +1,4 @@
-var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+var NODE_ENV = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 require('babel/register');
 
-module.exports = require('./build/karma/make')(env);
+module.exports = require('./build/karma/make')(NODE_ENV.toLowerCase());
