@@ -52,10 +52,14 @@ export default {
     }
   },
   module : {
-    preLoaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'jshint'
+    preLoaders : [{
+      test : /\.js?$/,
+      exclude : /node_modules/,
+      loader : 'jshint'
+    }, {
+      test : /\.jsx?$/,
+      exclude : /node_modules/,
+      loader : 'jsxhint'
     }],
     loaders : [{
       test : [/\.(js|jsx)?$/],
@@ -72,7 +76,7 @@ export default {
       ]
     }]
   },
-  jshint: {
+  jshint : {
     emitErrors : false,
     failOnHint : false,
     reporter   : require('jshint-loader-stylish')()
