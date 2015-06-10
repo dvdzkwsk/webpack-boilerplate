@@ -37,6 +37,7 @@
     "mocha": "^2.2.5",
     "node-sass": "^3.0.0",
     "phantomjs-polyfill": "0.0.1",
+    "react-hot-loader": "^1.2.7",
     "sass-loader": "^1.0.2",
     "style-loader": "^0.12.1",
     "webpack": "^1.9.0",
@@ -45,6 +46,7 @@
   },
   "dependencies": {
     "babel": "^5.2.15",
-    "babel-runtime": "^5.4.7"
+    "babel-runtime": "^5.4.7",
+    "react": "^0.13.3"
   }
 }

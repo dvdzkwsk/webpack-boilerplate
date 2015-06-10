@@ -13,5 +13,12 @@ export default {
   plugins : config.plugins.concat([
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
-  ])
+  ]),
+  loaders : config.module.loaders.map(loader => {
+    if (/js/.test(loader.test)) {
+      loader.loaders.unshift('react-hot');
+    }
+
+    return loader;
+  })
 };

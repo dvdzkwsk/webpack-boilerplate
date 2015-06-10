@@ -15,8 +15,8 @@ export default {
   entry : {
     app : [
       resolve('app/index')
-    ]
-    // vendor : ['react']
+    ],
+    vendor : ['react']
   },
   output : {
     path : resolve('dist'),
@@ -45,12 +45,8 @@ export default {
       components  : resolve('app/components'),
       config      : resolve('app/config'),
       constants   : resolve('app/constants'),
-      directives  : resolve('app/directives'),
       dispatchers : resolve('app/dispatchers'),
-      factories   : resolve('app/factories'),
-      filters     : resolve('app/filters'),
       models      : resolve('app/models'),
-      providers   : resolve('app/providers'),
       services    : resolve('app/services'),
       stores      : resolve('app/stores')
     }
