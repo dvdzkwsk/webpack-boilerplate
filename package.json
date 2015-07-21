@@ -10,8 +10,7 @@
     "dev:quiet": "webpack-dev-server --port 3000 --hot --inline --colors --no-info --history-api-fallback --quiet",
     "test": "npm run test:unit",
     "test:unit": "node ./node_modules/karma/bin/karma start",
-    "deploy": "npm run test && npm run compile",
-    "postinstall": "NODE_ENV=production npm run deploy"
+    "deploy": "npm run test && npm run compile"
   },
   "author": "David Zukowski <david@zuko.me> (http://zuko.me)",
   "license": "MIT",
