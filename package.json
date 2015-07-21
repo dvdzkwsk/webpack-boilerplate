@@ -9,7 +9,6 @@
     "compile:prod": "NODE_ENV=production npm run compile",
     "build": "npm run compile",
     "build:prod": "NODE_ENV=production npm run build",
-    "server:start": "node ./server/scripts/start.js",
     "dev": "webpack-dev-server --port 3000 --hot --inline --colors --history-api-fallback",
     "dev:quiet": "webpack-dev-server --port 3000 --hot --inline --colors --no-info --history-api-fallback --quiet",
     "setup": "npm install",
