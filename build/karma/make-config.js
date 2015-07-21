@@ -9,7 +9,7 @@ function makeDefaultConfig () {
   return {
     files : [
       './node_modules/phantomjs-polyfill/bind-polyfill.js',
-      `${SRC_DIRNAME}/unit-test-entry.js`
+      `${SRC_DIRNAME}/karma.entry.js`
     ],
     frameworks : ['chai', 'mocha'],
     preprocessors : {
