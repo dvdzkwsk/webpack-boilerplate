@@ -12,7 +12,8 @@
     "dev": "webpack-dev-server --port 3000 --hot --inline --colors --history-api-fallback",
     "dev:quiet": "webpack-dev-server --port 3000 --hot --inline --colors --no-info --history-api-fallback --quiet",
     "setup": "npm install",
-    "test": "echo \"test is noop\"",
+    "test": "node ./node_modules/karma/bin/karma start",
+    "test:prod": "NODE_ENV=production npm run test",
     "deploy": "npm run build:prod && npm run test",
     "postinstall": "npm run deploy"
   },
