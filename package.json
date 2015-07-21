@@ -6,16 +6,11 @@
   "scripts": {
     "clean": "rm -rf dist",
     "compile": "webpack",
-    "compile:prod": "NODE_ENV=production npm run compile",
-    "build": "npm run compile",
-    "build:prod": "NODE_ENV=production npm run build",
     "dev": "webpack-dev-server --port 3000 --hot --inline --colors --history-api-fallback",
     "dev:quiet": "webpack-dev-server --port 3000 --hot --inline --colors --no-info --history-api-fallback --quiet",
-    "setup": "npm install",
     "test": "node ./node_modules/karma/bin/karma start",
-    "test:prod": "NODE_ENV=production npm run test",
-    "deploy": "npm run build:prod && npm run test",
-    "postinstall": "npm run deploy"
+    "deploy": "npm run test && npm run compile",
+    "postinstall": "NODE_ENV=production npm run deploy"
   },
   "author": "David Zukowski <david@zuko.me> (http://zuko.me)",
   "license": "MIT",
