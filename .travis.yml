@@ -4,7 +4,7 @@ node_js:
   - "iojs"
 
 install:
-  - npm install
+  - npm install --devDependencies
 
 script:
   - npm run deploy
