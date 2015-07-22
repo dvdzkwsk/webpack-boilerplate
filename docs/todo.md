@@ -1,1 +1,3 @@
-* [ ] Rewrite karma config to match webpack make config pattern
+* [ ] Should we use Jest (instead of Mocha)?
+* [ ] E2E test library?
+* [ ] Ability to bake pages?
