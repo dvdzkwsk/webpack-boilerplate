@@ -3,7 +3,7 @@ Webpack Boilerplate
 
 [![Build Status](https://travis-ci.org/davezuko/webpack-boilerplate.svg?branch=master)](https://travis-ci.org/davezuko/webpack-boilerplate/)
 
-Simple boilerplate to get up and running with a [Webpack](http://webpack.github.io/)-based build system; designed to make environment-specific configuration as easy as possible.
+Simple boilerplate to get up and running with a [Webpack](http://webpack.github.io/)-based build system; designed to make environment-specific configuration as easy as possible. This boilerplate is the result of multiple iterations and lessons I've learned over time, from Jake to Grunt to Gulp, and now on to Webpack. Will it be something new tomorrow? Probably, but this boilerplate has stayed with me longer than any I've used prior, and I've tried to keep it as flexible as possible to accommodate inevitable changes.
 
 Table of Contents
 -----------------
@@ -14,7 +14,7 @@ Table of Contents
 
 About
 -----
-This boilerplate comes preconfigured with a development and production configuration, but you can add more more as needed by creating a `.js` file in `~/build/webpack/configs`. These files only need to export changes against the default configuration as the two will be merged before being exported to Webpack.
+This boilerplate comes preconfigured with a development and production configuration, but you can add more more as needed by following the pattern in `~/build/webpack/configs/client`, where `client` is the name of the bundle. This setup gives you a standardized default configuration with the ability to create multiple bundles and update them on a per-environment basis. If you add more bundles, don't forget to update `webpack.config.js`!.
 
 Features
 --------
@@ -59,6 +59,9 @@ Runs all tests (both unit and E2E) for the application. Will run in live (watch)
 
 #### `npm run test:unit`
 Similar to `npm run test`, but only runs unit tests.
+
+#### `npm run test:e2e`
+Similar to `npm run test`, but only runs E2E tests. (NOT YET AVAILABLE)
 
 Troubleshooting
 ---------------
