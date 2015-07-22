@@ -1,6 +1,7 @@
 import { NODE_ENV, SRC_DIRNAME } from '../../config';
 import makeWebpackConfig from '../webpack/make-config';
 
+const KARMA_ENTRY = 'karma.entry.js';
 const WEBPACK_CONFIG = makeWebpackConfig(
   require('../webpack/client')
 );
@@ -9,10 +10,11 @@ function makeDefaultConfig () {
   return {
     files : [
       './node_modules/phantomjs-polyfill/bind-polyfill.js',
-      `${SRC_DIRNAME}/karma.entry.js`
+      `./${KARMA_ENTRY}`
     ],
     frameworks : ['chai', 'mocha'],
     preprocessors : {
+      [KARMA_ENTRY] : ['webpack'],
       [`${SRC_DIRNAME}/**/*.js`] : ['webpack']
     },
     reporters : ['spec'],
