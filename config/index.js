@@ -1,5 +1,16 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
+const resolve = require('path').resolve,
+      _slice  = [].slice;
+
+const PROJECT_PATH = resolve(__dirname, '../'),
+      SRC_DIRNAME  = 'src',
+      DIST_DIRNAME = 'dist';
+
+function inProject () {
+  return resolve.apply(resolve, [PROJECT_PATH].concat(_slice.apply(arguments)));
+}
+
 module.exports = exports = {
 
   // environment
@@ -8,12 +19,15 @@ module.exports = exports = {
   __DEV__   : process.env.NODE_ENV === 'development',
   __PROD__  : process.env.NODE_ENV === 'production',
 
+  // path helpers
+  SRC_DIRNAME  : SRC_DIRNAME,
+  DIST_DIRNAME : DIST_DIRNAME,
+  PROJECT_PATH : PROJECT_PATH,
+  inProject : inProject,
+  inSrc     : inProject.bind(undefined, SRC_DIRNAME),
+  inDist    : inProject.bind(undefined, DIST_DIRNAME),
+
   // build system
   VENDOR_DEPENDENCIES : ['react'],
-  SRC_DIRNAME  : 'src',
-  DIST_DIRNAME : 'dist',
-
-  // server
-  WEBPACK_PORT : 2000,
-  SERVER_PORT  : 3000
+  WEBPACK_PORT : 2000
 };

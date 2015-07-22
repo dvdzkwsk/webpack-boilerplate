@@ -3,8 +3,7 @@ import autoprefixer from 'autoprefixer-core';
 import csswring from 'csswring';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import makeConfig from '../make-config';
-import { inSrc, inDist } from '../../../lib/path';
-import { NODE_ENV, VENDOR_DEPENDENCIES } from '../../../config';
+import { inSrc, inDist, NODE_ENV, VENDOR_DEPENDENCIES } from '../../../config';
 
 const config = makeConfig({
   name   : 'Client',

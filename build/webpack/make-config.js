@@ -1,7 +1,13 @@
 import assign from 'object-assign';
 import webpack from 'webpack';
-import { inProject, inSrc, inDist } from '../../lib/path';
-import { NODE_ENV, SRC_DIRNAME, __DEV__, __PROD__ } from '../../config';
+import {
+  NODE_ENV,
+  inProject,
+  inSrc,
+  SRC_DIRNAME,
+  __DEV__,
+  __PROD__
+} from '../../config';
 
 function makeDefaultConfig () {
   const config = {
