@@ -23,8 +23,8 @@ For recruiters:
  * Babel (ES6, JSX)
  * React
  * PostCSS
- * ESLint
- * Webpack w/ Webpack-Dev-Server
+ * ESLint with Babel-lint
+ * Webpack w/ Webpack-dev-server
 
 For everyone else:
 

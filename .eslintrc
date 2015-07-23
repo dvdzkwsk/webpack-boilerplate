@@ -151,7 +151,6 @@
     "no-spaced-func": 2,
     "no-ternary": 0,
     "no-trailing-spaces": 1,
-    "no-multiple-empty-lines": 1,
     "no-underscore-dangle": 0,
     "no-unneeded-ternary": 2,
     "object-curly-spacing": [1, "always"],

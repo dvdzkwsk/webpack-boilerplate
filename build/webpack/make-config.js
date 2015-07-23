@@ -42,7 +42,7 @@ function makeDefaultConfig () {
         {
           test : /\.(js|jsx)?$/,
           loaders : ['eslint-loader'],
-          exclude : /node_modules/
+          include : inProject(SRC_DIRNAME)
         }
       ],
       loaders : [{
