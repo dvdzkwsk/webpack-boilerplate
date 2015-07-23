@@ -1,11 +1,15 @@
 import React from 'react';
 
 export default class App extends React.Component {
+  static propTypes = {
+    message : React.PropTypes.string.isRequired
+  }
+
   constructor () {
     super();
   }
 
   render () {
-    return <h1>Welcome the Webpack Boilerplate!</h1>;
+    return <h1>{this.props.message}</h1>;
   }
 }
