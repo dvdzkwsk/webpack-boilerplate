@@ -9,6 +9,7 @@ Table of Contents
 -----------------
 1. [About](#about)
 1. [Features](#features)
+1. [Why Webpack](#why-webpack)
 1. [How to Use](#how-to-use)
 1. [Troubleshooting](#troubleshooting)
 
@@ -43,6 +44,11 @@ For everyone else:
   * Production build configured by default to fail on errors
 * Aliases for common local requires
 * Pre-configured NPM scripts for common tasks
+
+Why Webpack?
+------------
+
+If you haven't already hopped on the Webpack bandwagon, here's a brief introduction to its awesomeness. It's configuration based, so in that sense it's closer to Grunt than to Gulp, but that configuration is much more powerful with Webpack. Just out of the box, with just Webpack and its dev server companion, you get bundle splitting, cache busting, hot module replacement (think of livereload but per file/chunk, meaning its possible to refresh _only what changed_), and even the ability to `require` non-JS assets. Cool, huh?
 
 How to Use
 ----------
