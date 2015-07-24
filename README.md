@@ -23,6 +23,7 @@ For recruiters:
  * Babel (ES6, JSX)
  * React
  * PostCSS
+ * Karma w/ Mocha, Chai, and PhantomJS
  * ESLint with Babel-lint
  * Webpack w/ Webpack-dev-server
 
@@ -34,6 +35,7 @@ For everyone else:
   * Development: enables Webpack's dev server and React hot-loader
   * Production: minification and css extraction
 * PostCSS loader to support `.css` requires and transformations
+  * Includes CSSWring and Autoprefixer
 * Easy environment configuration on a per-webpack-entry-point basis
 * Configurable vendor bundle to split application code from 3rd-party dependencies
 * Unit testing with Karma, PhantomJS, Mocha, and the Chai assertion library
