@@ -3,9 +3,9 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const resolve = require('path').resolve,
       _slice  = [].slice;
 
-const PROJECT_PATH = resolve(__dirname, '../'),
-      SRC_DIRNAME  = 'src',
-      DIST_DIRNAME = 'dist';
+const SRC_DIRNAME  = 'src',
+      DIST_DIRNAME = 'dist',
+      PROJECT_PATH = resolve(__dirname, '../');
 
 function inProject () {
   return resolve.apply(resolve, [PROJECT_PATH].concat(_slice.apply(arguments)));
@@ -28,6 +28,5 @@ module.exports = exports = {
   inDist    : inProject.bind(undefined, DIST_DIRNAME),
 
   // build system
-  VENDOR_DEPENDENCIES : ['react'],
-  WEBPACK_PORT : 2000
+  VENDOR_DEPENDENCIES : ['react']
 };
