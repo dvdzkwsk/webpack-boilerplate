@@ -1,5 +1,5 @@
 export default (config) => {
-  config.singleRun = false;
+  config.singleRun = true;
 
   return config;
 };
