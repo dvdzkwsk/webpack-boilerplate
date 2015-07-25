@@ -11,6 +11,7 @@ Table of Contents
 1. [Features](#features)
 1. [Why Webpack](#why-webpack)
 1. [How to Use](#how-to-use)
+1. [Creating Unit Tests](#creating-unit-tests)
 1. [Troubleshooting](#troubleshooting)
 
 About
@@ -23,7 +24,7 @@ Features
 For recruiters:
  * Babel (ES6, JSX)
  * React
- * PostCSS
+ * Sass
  * Karma w/ Mocha, Chai, and PhantomJS
  * ESLint with Babel-lint
  * Webpack w/ Webpack-dev-server
@@ -35,8 +36,7 @@ For everyone else:
 * Development and production modes out of the box
   * Development: enables Webpack's dev server and React hot-loader
   * Production: minification and css extraction
-* PostCSS loader to support `.css` requires and transformations
-  * Includes CSSWring and Autoprefixer
+* Sass Loader with autoprefixer and local aliases
 * Easy environment configuration on a per-webpack-entry-point basis
 * Configurable vendor bundle to split application code from 3rd-party dependencies
 * Unit testing with Karma, PhantomJS, Mocha, and the Chai assertion library
@@ -52,6 +52,12 @@ If you haven't already hopped on the Webpack bandwagon, here's a brief introduct
 
 How to Use
 ----------
+
+### Directory Structure
+
+It's pretty simple, and all you'll probably end up caring about is the `~/src` directory, which contains the `index.html` file that Webpack bakes during `npm run compile` or uses as the base in development mode. In `~/src/entry-points` you'll find a `client` folder, which is the main entry point for the sample Webpack configuration in `~/build/webpack/client`.
+
+### Available Scripts
 
 #### `npm run compile`
 Runs the Webpack build with your current node environment; compiles the results to disk.
@@ -70,6 +76,11 @@ Similar to `npm run test`, but only runs unit tests.
 
 #### `npm run test:e2e`
 Similar to `npm run test`, but only runs E2E tests. (NOT YET AVAILABLE)
+
+Creating Unit Tests
+-------------------
+
+Karma's unit test entry file is `~/karma.entry.js` which scans the `~/src` directory for all files matching `.spec.js`, so creating a unit test is as easy as creating that file. The chai assertion library will be available to you from within this file, no requires necessary, so you can just get to testing!
 
 Troubleshooting
 ---------------

@@ -9,7 +9,7 @@ export default function (config) {
   config.module.loaders = config.module.loaders.map(loader => {
 
     // Extract CSS to a file
-    if (/\.css/.test(loader.test)) {
+    if (/\.scss/.test(loader.test)) {
       loader.loader = ExtractTextPlugin.extract(
         loader.loaders[0], loader.loaders.slice(1).join('!')
       );

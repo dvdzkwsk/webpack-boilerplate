@@ -1,6 +1,4 @@
 import webpack from 'webpack';
-import autoprefixer from 'autoprefixer-core';
-import csswring from 'csswring';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import makeConfig from '../make-config';
 import { inSrc, inDist, NODE_ENV, VENDOR_DEPENDENCIES } from '../../../config';
@@ -40,10 +38,14 @@ config.plugins.push(
 // ------------------------------------
 config.module.loaders.push(
   {
-    test : /\.css$/,
-    loaders : ['style', 'css', 'postcss']
+    test : /\.scss$/,
+    loaders : [
+      'style-loader',
+      'css-loader',
+      'autoprefixer?browsers=last 2 version',
+      `sass-loader?includePaths[]=${inSrc('styles')}`
+    ]
   }
-)
-config.postcss = () => [autoprefixer, csswring]
+);
 
 export default require(`./_${NODE_ENV}`)(config);
