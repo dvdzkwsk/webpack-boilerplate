@@ -48,4 +48,6 @@ config.module.loaders.push(
   }
 );
 
-export default require(`./_${NODE_ENV}`)(config);
+export default (configName) => {
+  return require(`./_${configName || NODE_ENV}`)(config);
+};

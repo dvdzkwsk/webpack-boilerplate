@@ -3,7 +3,7 @@ import makeWebpackConfig from '../webpack/make-config';
 
 const KARMA_ENTRY = 'karma.entry.js';
 const WEBPACK_CONFIG = makeWebpackConfig(
-  require('../webpack/client')
+  require('../webpack/client')('development')
 );
 
 function makeDefaultConfig () {

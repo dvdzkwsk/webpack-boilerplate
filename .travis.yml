@@ -7,4 +7,4 @@ install:
   - npm install
 
 script:
-  - npm run test && NODE_ENV=production npm run compile
+  - NODE_ENV=production npm run deploy
