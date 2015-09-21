@@ -3,6 +3,8 @@ Webpack Boilerplate
 
 [![Build Status](https://travis-ci.org/davezuko/webpack-boilerplate.svg?branch=master)](https://travis-ci.org/davezuko/webpack-boilerplate/)
 
+**NOTE**: This project has been moved to my [React-Redux-Starter-Kit](https://github.com/davezuko/react-redux-starter-kit) which is actively supported and much more feature complete. If this works for you, awesome, if not go check that out :).
+
 Simple boilerplate to get up and running with a [Webpack](http://webpack.github.io/)-based build system; designed to make environment-specific configuration as easy as possible. This boilerplate is the result of multiple iterations and lessons I've learned over time, from Jake to Grunt to Gulp, and now on to Webpack. Will it be something new tomorrow? Probably, but this boilerplate has stayed with me longer than any I've used prior, and I've tried to keep it as flexible as possible to accommodate inevitable changes.
 
 Table of Contents
